@@ -17,23 +17,34 @@ export default class HelloWorldScene extends Phaser.Scene
             }
         });
 
-        console.log(FontsTool.loadFont('Fuentecita-ttf', 'assets/fonts/Joynoted Demo.ttf'));
-        console.log(FontsTool.loadFont('Fuentecita-otf', 'assets/fonts/Gemini Moon.otf'));
+        FontsTool.loadFont('Fuentecita-ttf', 'assets/fonts/Joynoted Demo.ttf');
+        FontsTool.loadFont('Fuentecita-otf', 'assets/fonts/Gemini Moon.otf');
     }
 
     create()
     {
-        this.add.text(400, 100, 'Wenas, fuente de Google', {
+        this.add.text(200, 100, 'Fuente ttf local', {
+            fontFamily: 'Avigea',
+            fontSize: '42px',
+            backgroundColor: "#ff0000"
+        }).setOrigin(.5);
+        this.add.text(200, 200, 'Fuente otf local', {
+            fontFamily: 'PeopleBook',
+            fontSize: '42px',
+            backgroundColor: "#ff0000"
+        }).setOrigin(.5);
+
+        this.add.text(600, 100, 'Fuente de Google', {
             fontFamily: 'Droid Sans',
             fontSize: '42px',
             backgroundColor: "#ff0000"
         }).setOrigin(.5);
-        this.add.text(400, 200, 'Wenas, fuente otf local', {
+        this.add.text(600, 200, 'Fuente otf local', {
             fontFamily: 'Fuentecita-ttf',
             fontSize: '42px',
             backgroundColor: "#ff0000"
         }).setOrigin(.5);
-        this.add.text(400, 300, 'Wenas, fuente ttf local', {
+        this.add.text(600, 300, 'Fuente ttf local', {
             fontFamily: 'Fuentecita-otf',
             fontSize: '42px',
             backgroundColor: "#ff0000"
